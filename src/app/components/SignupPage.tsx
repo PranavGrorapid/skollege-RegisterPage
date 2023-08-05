@@ -46,7 +46,7 @@ const SignupPage = () => {
     (data) => data.code === selectedCountryCode
   )?.flagUrl;
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e :any) => {
     e.preventDefault();
     console.log(userName, email, dob, countryCode, mobileNumber, degree);
   };
