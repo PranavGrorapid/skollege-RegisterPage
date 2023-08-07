@@ -24,6 +24,10 @@ const Contactus = () => {
 
   const [countryCode, setCountrycode] = useState("");
   const [mobileNumber, setMobileNumber] = useState("");
+  const [userName, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
 
   const [selectedCountryCode, setSelectedCountryCode] = useState(
     dummyCountryData[0].code
@@ -33,6 +37,11 @@ const Contactus = () => {
   const handleCountryCodeChange = (code: any) => {
     setSelectedCountryCode(code);
     setDropdownOpen(false);
+  };
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    console.log(userName,  countryCode, mobileNumber,message);
   };
 
   const selectedCountryFlag = dummyCountryData.find(
@@ -62,7 +71,7 @@ const Contactus = () => {
       <div className=" container">
         {/* contact us form starts */}
 
-        <form action="">
+        <form action=""  onSubmit={handleSubmit}>
           <div className="space-y-6 flex flex-col justify-center items-center xl:space-y-12 xl:items-start">
             {/* contact us form ends */}
 
@@ -73,6 +82,7 @@ const Contactus = () => {
                   type="text"
                   className=" px-6  h-[47px] left-0 top-0 absolute bg-stone-50 rounded-[5px] border border-orange-400 xl:w-[500px] xl:h-[57px] "
                   placeholder="Enter your name"
+                  onChange={(e) => setUsername(e.target.value)}
                 />
               </div>
 
@@ -90,6 +100,7 @@ const Contactus = () => {
                 type="text"
                 className="text-zinc-800 text-sm font-normal  px-[38px] py-3 xl:w-[500px] xl:h-[57px]  "
                 placeholder="Email ID"
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             {/* Email input field ends */}
@@ -167,6 +178,7 @@ const Contactus = () => {
                 type="text"
                 className=" h-[87px] px-[26px] py-2.5 rounded-[5px] border border-neutral-200 placeholder:text-slate-400 xl:w-[500px] xl:h-[100px]  "
                 placeholder="Type your message.."
+                onChange={(e) => setMessage(e.target.value)}
               />
             </div>
 
