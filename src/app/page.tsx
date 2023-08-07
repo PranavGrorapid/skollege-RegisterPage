@@ -1,11 +1,20 @@
-import Image from 'next/image'
-import SignupPage from './components/SignupPage'
+import Image from "next/image";
+import SignupPage from "./Pages/SignupPage";
+import AboutusPage from "./Pages/Contactus";
+import Contactus from "./Pages/Contactus";
 
 export default function Home() {
   return (
-   
-   <div>
-        <SignupPage/>
-   </div>
-  )
+    <div>
+
+
+      {/* <SignupPage /> */}
+
+        <Contactus/>
+
+
+
+
+    </div>
+  );
 }
