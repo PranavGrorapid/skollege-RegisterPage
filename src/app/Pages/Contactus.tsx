@@ -40,7 +40,7 @@ const Contactus = () => {
   )?.flagUrl;
 
   return (
-    <div className="bg-baseWhites pb-10">
+    <div className="bg-baseWhites pb-10 md:pb-20">
       <div className="container flex flex-col py-5 space-y-3 ">
         <div className="text-zinc-800 text-lg font-semibold">Contact Us</div>
 
